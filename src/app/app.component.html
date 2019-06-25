@@ -1,0 +1,19 @@
+<mat-sidenav-container fullscreen>
+  <mat-toolbar color="primary">
+    <span>State App</span>
+    <span class="blank-grow"></span>
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm routerLinkActive="active">
+      <h4 class="link" routerLink="">
+        <mat-icon mat-list-icon class="link-icon">home</mat-icon>
+        <span mat-line>Home</span>
+      </h4>
+      <h4 class="link" routerLink="upload">
+        <mat-icon mat-list-icon class="link-icon">backup</mat-icon>
+        <span mat-line>Upload</span>
+      </h4>
+    </div>
+  </mat-toolbar>
+</mat-sidenav-container>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

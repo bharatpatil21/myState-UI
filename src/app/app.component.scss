@@ -1,0 +1,22 @@
+.mat-sidenav-container {
+	background: rgba(0, 0, 0, 0.08);
+	position: relative !important;
+}
+
+
+.blank-grow {
+	flex: 1 1 auto;
+}
+
+.link {
+	display: inline-block;
+	padding-left: 15px;
+	cursor: pointer;
+	outline: none;
+	font-size: 15px;
+
+	&-icon {
+		margin-right: 0px;
+    font-size: 18px;
+	}
+}

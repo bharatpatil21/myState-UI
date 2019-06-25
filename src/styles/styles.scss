@@ -1,0 +1,55 @@
+@import 'fonts/fonts';
+
+/************************************** COMMON STYLES **************************************/
+html, body, md-sidenav-container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $font-family-body;
+}
+
+body {
+  overflow: hidden;
+}
+
+// common styling
+h1 {
+  font-family: $font-family-h1;
+  font-size: 1.625em;
+}
+
+h2 {
+  font-family: $font-family-h2;
+  font-size: 1.25em;
+}
+
+h3 {
+  font-family: $font-family-h3;
+  font-size: 1em;
+}
+
+h4 {
+  font-family: $font-family-h4;
+  font-size: 1em;
+}
+
+h5 {
+  font-family: $font-family-h5;
+  font-size: 0.875em;
+}
+
+h6 {
+  font-family: $font-family-h6;
+  font-size: 0.75em;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+
+mat-form-field {
+  margin-right: 20px;
+}
+
+mat-raised-button {
+  outline: none;
+}

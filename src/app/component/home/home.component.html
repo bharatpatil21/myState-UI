@@ -1,0 +1,29 @@
+<div class="row" class="state-block">
+  <mat-form-field class="state-block__field">
+    <mat-select placeholder="Field" (selectionChange)="onFieldChange($event.value)">
+      <mat-option *ngFor="let field of fields" [value]="field.name">
+        {{field.display_name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="state-block__field">
+    <mat-select placeholder="State" (openedChange)="comboChange($event)" [formControl]="toppings" multiple>
+      <mat-option *ngFor="let state of states" [value]="state._id">
+        {{state.state_name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button [disabled]="isReportDisabled" (click)="getReport()">Report</button>
+</div>
+<div class="row" *ngIf="!isReportDisabled">
+  <div class="col-sm-6">
+    <google-chart #chart [type]="paiType" [data]="paiData" [columnNames]="paiColumnNames" [options]="paiOptions"
+      [width]="paiWidth" [height]="paiHeight">
+    </google-chart>
+  </div>
+  <div class="col-sm-6">
+    <google-chart #chart [type]="barType" [data]="barData" [columnNames]="barColumnNames" [options]="barOptions"
+      [width]="barWidth" [height]="barHeight">
+    </google-chart>
+  </div>
+</div>
